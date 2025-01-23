@@ -38,21 +38,6 @@ function Voiture (c, f, t) {
 
 }
 
-
-// En utilisant le mot clé class
-
-// class Voiture {
-//     constructor(c, f, t) {
-//         this.couleur = c;
-//         this.forme = f;
-//         this.taille = t;
-
-//         this.demarrer = () => {
-//             console.log("Demmarage !");
-//         };
-//     }
-// }
-
 // Initialisation des 3 objets voiture
 
 let voiture1 = new Voiture("Bleu", "rond", "grande");
