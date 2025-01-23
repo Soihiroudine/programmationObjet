@@ -36,3 +36,33 @@ documentJavascript.description();
 console.log("\n============");
 console.log("Titre : " + documentMysql.titre + "\nAuteur : " + documentMysql.auteur + "\nNombre de page : " + documentMysql.nombrePage + "\n" + "--------------");
 documentMysql.description();
+
+/**
+ * Classe enfant Livre étendue de la classe Document
+ * 
+ * La classe Document va servir de base pour la classe Livre
+ * En outre, la classe Livre va pouvoir utiliser tous les attributs et méthodes de la classe Document
+ * Et pour faire cela on utilise le mot-clé "extends"
+ */
+class Livre extends Document {
+    // Constructeur de la classe Livre
+    constructor(titre, nombrePage, auteur, maisonEdition) {
+        // Propriétés héritées de la classe parent Document
+        // super() appelle au constructeur de la classe parent Document
+        super(titre, nombrePage, auteur);
+        // Propriété spécifique de la clase enfant Livre
+        this.maisonedition = maisonEdition;
+    
+    }
+    
+    // Méthode spécifique à la classe Livre
+    convertirPdf(){
+        console.log("Je convertis le livre en PDF.");
+    }
+}
+
+// crée plusieurs exemplaires de livre.
+// En programmation, on dit : je crée une instance de la classe Livre
+let livreInformatique = new Livre("Informatique c'est facile", 45, "Bacar Koutsi", "Ylang edition");
+
+livreInformatique.convertirPdf();
